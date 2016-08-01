@@ -1,0 +1,28 @@
+{
+  "name": "vapor-clean",
+  "version": "1.0.0",
+  "description": "A *lean* template for creating Vapor applications from scratch, with everything you need to make a quick start, and nothing that could have a negative impact on your workflow.",
+  "main": "Public/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmgash/vapor-clean.git"
+  },
+  "author": "David Ash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmgash/vapor-clean/issues"
+  },
+  "homepage": "https://github.com/dmgash/vapor-clean#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-uglifycss": "^1.0.6"
+  }
+}
