@@ -53,7 +53,7 @@ CSS TASK - selects each .css file - except those already minified - from the
 source location, minifies them, adds '.min' as a suffix to the file names, and
 drops them into the receiving location.
 *******************************************************************************/
-gulp.task('css', function() {
+gulp.task('css', ['sass'], function() {
   return gulp.src(paths.css)
     .pipe(uglifycss())
     .pipe(rename({suffix: '.min'}))
@@ -66,8 +66,7 @@ the associated task when a change is detected.
 *******************************************************************************/
 gulp.task('watch', function() {
   gulp.watch(paths.scripts, ['scripts']);
-  gulp.watch(paths.sass, ['sass']);
-  gulp.watch(paths.css, ['css']);
+  gulp.watch(paths.sass, ['css']);
 });
 
 /*******************************************************************************
@@ -75,4 +74,4 @@ DEFAULT TASK - triggers each task when the 'gulp' command is first executed
 on the command line. The watch task continues to run until the process is exited
 by the user.
 *******************************************************************************/
-gulp.task('default', ['watch', 'scripts', 'sass', 'css']);
+gulp.task('default', ['watch', 'scripts', 'css']);
